@@ -11,13 +11,13 @@ cache:
 
 deploy:
   - provider: script
-    script: ./gradlew gitPublishPush
+    script: ./gradlew annotations:gitPublishPush
     skip_cleanup: true
     on:
       tags: true
 
   - provider: script
-    script: ./gradlew gitPublishPush
+    script: ./gradlew annotations:gitPublishPush
     skip_cleanup: true
     on:
       branch: master
